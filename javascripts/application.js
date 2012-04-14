@@ -6,13 +6,21 @@ var slayer = 'slayer live';
 
 // parse any hashbangs and use that as search right away
 $(document).ready(function(){
-
-  load_player();
-  redraw();
-
-  $('#background').click(skip_video);
-
 	
+	if( navigator.userAgent.match(/Android/i)
+	 || navigator.userAgent.match(/webOS/i)
+	 || navigator.userAgent.match(/iPhone/i)
+	 || navigator.userAgent.match(/iPad/i)
+	 || navigator.userAgent.match(/iPod/i)
+	 || navigator.userAgent.match(/BlackBerry/i)
+	 ){
+		window.location = "http://vhx.tv/cheerschopper/play-some-slayer";
+	} else {
+	  load_player();
+	  redraw();
+	  $('#background').click(skip_video);
+		
+	}
 });
 
 
@@ -30,7 +38,8 @@ function redraw() {
   $('#search_wrapper').css('width', $(window).width() + 'px');
   $('#search_wrapper').css('top', $(window).height() / 2 - 243 / 2);
 
-  // if doc-width < #search_wrapper width, offset it so things remain centered
+  
+// if doc-width < #search_wrapper width, offset it so things remain centered
   if($(window).width() < $('#query').width()) {
     $('#search_wrapper').css('left', (($(window).width() - $('#query').width())/2) + 'px');
   }
