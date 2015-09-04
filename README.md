@@ -2,6 +2,10 @@
 
 Most websites are horrible, they should just play Slayer instead. Now mine does.
 
+#### September 5, 2015
+
+Sadly, Google deprecated the APIs used by Play Some Slayer so now it doesn't play any Slayer. Google, Y U NO LIKE SLAYER?
+
 ##Author(ish)
 
 [Joe Mahoney][joe]
